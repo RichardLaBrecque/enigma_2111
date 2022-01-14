@@ -11,8 +11,8 @@ class Enigma
     @date
   end
 
-  def encrypt(message, key, date = (Date.today.strftime"%d%m%y").to_s)
-    key_set = Keymaker.new(key)
+  def encrypt(message, key = rand(99999), date = (Date.today.strftime"%d%m%y").to_s)
+    key_set = Keymaker.new(key.to_s)
     offset = Offsetmaker.new(date)
     shiftmaker = Shiftmaker.new(key_set.makekeys, offset.makekeys)
     message = LetterShift.new(message, shiftmaker.makekeys)
