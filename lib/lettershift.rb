@@ -24,4 +24,22 @@ class LetterShift
     encrypted_array.join
     #binding.pry
   end
+
+  def unshift
+    keys = @shift_hash.keys
+    rotator = @set
+    encrypted_array = []
+    @message_array.each do |letter|
+      if @set.include?(letter)
+        #Sbinding.pry
+        original = @set.find_index(letter)
+        rotated = rotator.rotate(-(@shift_hash[keys[0]]))
+        encrypted_array << rotated[original]
+        keys.rotate!
+      else
+        encrypted_array << letter
+      end
+    end
+    encrypted_array.join
+  end
 end
