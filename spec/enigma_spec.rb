@@ -36,26 +36,4 @@ RSpec.describe LetterShift do
     expected =   {decryption: "hello world", key: "02715", date: "040895"}
     expect(enigma.decrypt("keder ohulw", "02715", "040895")).to eq(expected)
   end
-
-  xit 'holds a base letter set' do
-    expect(@letter.set).to eq(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "])
-  end
-
-  xit 'can shift one letter' do
-    expect(@letter.shift).to eq("d")
-  end
-
-  xit 'can encrypt a message' do
-    expect(@message.shift).to eq("keder ohulw")
-  end
-
-  xit 'can skip commas' do
-    expect(@message_2.shift).to eq("keder, ohulw!")
-  end
-
-  xit 'can unshift using the same keys' do
-    expect(@shifted.shift(-1)).to eq("hello, world!")
-  end
-
-
 end
