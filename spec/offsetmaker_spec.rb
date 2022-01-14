@@ -16,5 +16,6 @@ RSpec.describe Offsetmaker do
 
   it 'generates a, b, c, d keys as a hash' do
     expect(@offset_hash.makekeys).to eq({"A"=>1, "B"=>0, "C"=>2, "D"=>5})
+    expect(@offset_hash_2.makekeys).to eq({"A"=>0, "B"=>0, "C"=>0, "D"=>0})
   end
 end

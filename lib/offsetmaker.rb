@@ -6,15 +6,26 @@ class Offsetmaker
   end
 
   def makekeys
+    keys = (("A".."D")).to_a
+    offsets_reversed = (@encryption_key * @encryption_key).digits.first(4)
+    offset_hash = Hash.new(0)
+    if offsets_reversed.count < 4
+      until offsets_reversed.count == 4 do
+        offsets_reversed << 0
+      end
+    end
+    
+    offsets_reversed.each do |offset|
+      if offset == nil
+        offset_hash[keys.last] = 0
+        keys.rotate!(-1)
+      else
+          offset_hash[keys.last] = offset
+          keys.rotate!(-1)
+      end
+    end
+    offset_hash
 
-    square = @encryption_key * @encryption_key
-    binding.pry
-    keys = Hash.new
-    keys["A"] = (@encryption_key[0] +  @encryption_key[1]).to_i
-    keys["B"] = (@encryption_key[1] +  @encryption_key[2]).to_i
-    keys["C"] = (@encryption_key[2] +  @encryption_key[3]).to_i
-    keys["D"] = (@encryption_key[3] +  @encryption_key[4]).to_i
-    keys
   end
 
 
