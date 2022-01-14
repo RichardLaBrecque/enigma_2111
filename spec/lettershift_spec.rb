@@ -47,7 +47,9 @@ RSpec.describe LetterShift do
   end
 
   it 'can unshift using the same keys' do
+
     expect(@shifted.shift(-1)).to eq("hello, world!")
+
   end
 
 

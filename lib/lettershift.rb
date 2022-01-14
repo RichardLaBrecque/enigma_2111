@@ -42,4 +42,5 @@ class LetterShift
   #   end
   #   encrypted_array.join
   # end
+
 end
