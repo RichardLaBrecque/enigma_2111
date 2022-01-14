@@ -3,6 +3,7 @@ require_relative 'keymaker'
 require_relative 'offsetmaker'
 require_relative 'shiftmaker'
 require_relative 'lettershift'
+require!!! 'Date'
 class Enigma
   def initialize
     @encryption
@@ -11,8 +12,8 @@ class Enigma
     @date
   end
 
-  def encrypt(message, key, date = (Date.today.strftime"%d%m%y").to_s)
-    key_set = Keymaker.new(key)
+  def encrypt(message, key = rand(99999), date = (Date.today.strftime"%d%m%y").to_s)
+    key_set = Keymaker.new(key.to_s)
     offset = Offsetmaker.new(date)
     shiftmaker = Shiftmaker.new(key_set.makekeys, offset.makekeys)
     message = LetterShift.new(message, shiftmaker.makekeys)
@@ -22,7 +23,7 @@ class Enigma
 
   end
 
-  def decrypt(message, key, date = (Date.today.strftime"%d%m%y").to_s)
+  def decrypt(message, key = rand(99999), date = (Date.today.strftime"%d%m%y").to_s)
     key_set = Keymaker.new(key)
     offset = Offsetmaker.new(date)
     shiftmaker = Shiftmaker.new(key_set.makekeys, offset.makekeys)
