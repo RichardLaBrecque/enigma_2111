@@ -30,8 +30,8 @@ RSpec.describe Enigma do
   end
 
 
-  xit 'can decrypt when given all information' do
+  it 'can decrypt when given all information' do
     expected =   {decryption: "hello world", key: "02715", date: "040895"}
-    expect(enigma.decrypt("keder ohulw", "02715", "040895")).to eq(expected)
+    expect(@enigma.decrypt("keder ohulw", "02715", "040895")).to eq(expected)
   end
 end
