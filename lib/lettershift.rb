@@ -12,10 +12,14 @@ class LetterShift
     rotator = @set
     encrypted_array = []
     @message_array.each do |letter|
-      original = @set.find_index(letter)
-      rotated = rotator.rotate(@shift_hash[keys[0]])
-      encrypted_array << rotated[original]
-      keys.rotate!
+      if @set.include?(letter)
+        original = @set.find_index(letter)
+        rotated = rotator.rotate(@shift_hash[keys[0]])
+        encrypted_array << rotated[original]
+        keys.rotate!
+      else
+        encrypted_array << letter
+      end
     end
     encrypted_array.join
     #binding.pry

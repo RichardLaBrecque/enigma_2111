@@ -14,6 +14,7 @@ RSpec.describe LetterShift do
 
     @letter = LetterShift.new("A", @shiftmaker.makekeys)
       @message = LetterShift.new("hello world", @shiftmaker.makekeys )
+      @message_2 = LetterShift.new("Hello, World!", @shiftmaker.makekeys)
   end
   it 'exists' do
   expect(@shiftmaker).to be_a(Shiftmaker)
@@ -38,6 +39,10 @@ RSpec.describe LetterShift do
 
   it 'can encrypt a message' do
     expect(@message.shift).to eq("keder ohulw")
+  end
+
+  it 'can skip commas' do
+    expect(@message_2.shift).to eq("keder, ohulw!")
   end
 
 end
