@@ -19,6 +19,7 @@ RSpec.describe Enigma do
 
   end
   it 'exists' do
+    binding.pry
   expect(@enigma).to be_a(Enigma)
   end
 
