@@ -3,17 +3,18 @@ require 'pry'
 
 RSpec.describe Offsetmaker do
   before (:each) do
-    @offset_hash = Offsetmaker.new("12345")
+    @offset_hash = Offsetmaker.new("040895")
+    @offset_hash_2 = Offsetmaker.new("00000")
   end
   it 'exists' do
   expect(@offset_hash).to be_a(Offsetmaker)
   end
 
-  xit 'holds the starting key as an array' do
-    expect(@key_hash.encryption_key).to eq(["1", "2", "3", "4" ,"5"])
+  it 'holds the starting key as an array' do
+    expect(@offset_hash.encryption_key).to eq(40895)
   end
 
-  xit 'generates a, b, c, d keys as a hash' do
-    expect(@key_hash.makekeys).to eq({"A"=>"12", "B"=>"23", "C"=>"34", "D"=>"45"})
+  it 'generates a, b, c, d keys as a hash' do
+    expect(@offset_hash.makekeys).to eq({"A"=>1, "B"=>0, "C"=>2, "D"=>5})
   end
 end
