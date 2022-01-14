@@ -6,6 +6,7 @@ RSpec.describe Keymaker do
     @key_hash = Keymaker.new("02715")
     @key_hash_2 = Keymaker.new("00123")
     @key_hash_3 = Keymaker.new("00000")
+    @key_hash_4 = Keymaker.new("0")
   end
   it 'exists' do
   expect(@key_hash).to be_a(Keymaker)
@@ -20,5 +21,9 @@ RSpec.describe Keymaker do
     expect(@key_hash_2.makekeys).to eq({"A"=>00, "B"=>01, "C"=>12, "D"=>23})
     expect(@key_hash_3.makekeys).to eq({"A"=>0, "B"=>0, "C"=>0, "D"=>0})
     #
+  end
+
+  it "can handle a single digit input" do
+    expect(@key_hash_4.makekeys).to eq({"A"=>0, "B"=>0, "C"=>0, "D"=>0})
   end
 end
