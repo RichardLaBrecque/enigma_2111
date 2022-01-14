@@ -2,17 +2,15 @@ require './lib/lettershift'
 require './lib/shiftmaker'
 require './lib/keymaker'
 require './lib/offsetmaker'
+require './lib/lettershift'
+require './lib/enigma'
 require 'pry'
 
-RSpec.describe LetterShift do
+RSpec.describe Enigma do
   before (:each) do
     @offset = Offsetmaker.new("040895")
     @key = Keymaker.new("02715")
-    @key_hash = @key.makekeys
-    @offset_hash = @offset.makekeys
-    @shiftmaker = Shiftmaker.new(@key_hash, @offset_hash)
-
-    @letter = LetterShift.new("A", @shiftmaker.makekeys)
+    @shiftmaker = Shiftmaker.new(@key.makekeys, @offset.makekeys)
     @message = LetterShift.new("hello world", @shiftmaker.makekeys )
     @message_2 = LetterShift.new("Hello, World!", @shiftmaker.makekeys)
     @shifted = LetterShift.new("keder, ohulw!", @shiftmaker.makekeys)
@@ -24,7 +22,7 @@ RSpec.describe LetterShift do
   expect(@enigma).to be_a(Enigma)
   end
 
-  xit 'can encript a string and return a hash' do
+  it 'can encript a string and return a hash' do
     expect(@enigma.encrypt("hello world", "02715", "040895")).to eq({
     encryption: "keder ohulw",
     key: "02715",
