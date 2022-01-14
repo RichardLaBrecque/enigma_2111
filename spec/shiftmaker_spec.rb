@@ -1,24 +1,28 @@
 require './lib/shiftmaker'
 require './lib/keymaker'
 require './lib/offsetmaker'
-require pry
+require 'pry'
 
 RSpec.describe Shiftmaker do
   before (:each) do
-    @offset_hash = Offsetmaker.new("040895")
-    @key_hash = Keymaker.new("02715")
-    @offset = Offsetmaker.new(@key_hash, @offset_hash)
+    @offset = Offsetmaker.new("040895")
+    @key = Keymaker.new("02715")
+    @key_hash = @key.makekeys
+    @offset_hash = @offset.makekeys
+
+    @shiftmaker = Shiftmaker.new(@key_hash, @offset_hash)
   end
   it 'exists' do
-  expect(@offset_hash).to be_a(Offsetmaker)
+  expect(@shiftmaker).to be_a(Shiftmaker)
   end
 
-  xit 'holds the starting key as an array' do
-    expect(@offset_hash.encryption_key).to eq(40895)
+  it 'holds the hashes from key and offset makers' do
+    expect(@shiftmaker.key_hash).to eq({"A"=>02, "B"=>27, "C"=>71, "D"=>15})
+    expect(@shiftmaker.offset_hash).to eq({"A"=>1, "B"=>0, "C"=>2, "D"=>5})
   end
 
-  xit 'generates a, b, c, d keys as a hash' do
-    expect(@offset_hash.makekeys).to eq({"A"=>1, "B"=>0, "C"=>2, "D"=>5})
-    expect(@offset_hash_2.makekeys).to eq({"A"=>0, "B"=>0, "C"=>0, "D"=>0})
+
+it 'generates a, b, c, d shifts as a hash' do
+    expect(@shiftmaker.makekeys).to eq({"A"=>3, "B"=>27, "C"=>73, "D"=>20})
   end
 end
