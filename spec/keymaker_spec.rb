@@ -14,6 +14,7 @@ RSpec.describe Keymaker do
 
   it 'holds the starting key as an array' do
     expect(@key_hash.encryption_key).to eq(["0", "2", "7", "1" ,"5"])
+    expect(@key_hash.key).to eq("02715")
   end
 
   it 'generates a, b, c, d keys as a hash' do
