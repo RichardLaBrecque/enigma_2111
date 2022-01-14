@@ -12,19 +12,32 @@ RSpec.describe LetterShift do
     @offset_hash = @offset.makekeys
     @shiftmaker = Shiftmaker.new(@key_hash, @offset_hash)
 
-    @letter = LetterShift.new("A")
+    @letter = LetterShift.new("A", @shiftmaker.makekeys)
+      @message = LetterShift.new("hello world", @shiftmaker.makekeys )
   end
   it 'exists' do
   expect(@shiftmaker).to be_a(Shiftmaker)
   end
 
-  xit 'holds the hashes from key and offset makers' do
-    expect(@shiftmaker.key_hash).to eq({"A"=>02, "B"=>27, "C"=>71, "D"=>15})
-    expect(@shiftmaker.offset_hash).to eq({"A"=>1, "B"=>0, "C"=>2, "D"=>5})
+  it 'holds a lower case letter to shift' do
+    expect(@letter.string).to eq("a")
   end
 
 
-xit 'generates a, b, c, d shifts as a hash' do
-    expect(@shiftmaker.makekeys).to eq({"A"=>3, "B"=>27, "C"=>73, "D"=>20})
+  it 'contains a shift hash' do
+    expect(@letter.shift_hash).to eq({"A"=>3, "B"=>27, "C"=>73, "D"=>20})
   end
+
+  it 'holds a base letter set' do
+    expect(@letter.set).to eq(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "])
+  end
+
+  it 'can shift one letter' do
+    expect(@letter.shift).to eq("d")
+  end
+
+  it 'can encrypt a message' do
+    expect(@message.shift).to eq("keder ohulw")
+  end
+
 end
