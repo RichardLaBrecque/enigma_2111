@@ -23,7 +23,7 @@ class Enigma
     shiftmaker = Shiftmaker.new(key_set.makekeys, offset.makekeys)
     message = LetterShift.new(message, shiftmaker.makekeys)
     decrypted = message.shift(-1)
-    final = {decryption: decrypted, key: key, date: date}
+    final = {decryption: decrypted, key: key_set.key_used, date: date}
     final
   end
 
