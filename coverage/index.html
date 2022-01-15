@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-01-14T20:01:52-05:00">2022-01-14T20:01:52-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-01-14T21:00:08-05:00">2022-01-14T21:00:08-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  98.99%
+  96.97%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         12.94
+         12.14
        </span>
     </span> hits/line
     )
@@ -44,10 +44,10 @@
 
   <div class="t-line-summary">
     <b>198</b> relevant lines,
-    <span class="green"><b>196</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed. </span>
+    <span class="green"><b>192</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed. </span>
     (<span class="green">
-  98.99%
+  96.97%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#657d94aecd9a8337104ecbc85872a82832b17460" class="src_link" title="lib/enigma.rb">lib/enigma.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="red strong cell--number t-file__coverage">75.00 %</td>
             <td class="cell--number">33</td>
             <td class="cell--number">24</td>
-            <td class="cell--number">24</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">0.75</td>
             
           </tr>
         
@@ -88,40 +88,40 @@
             <td class="cell--number">18</td>
             <td class="cell--number">18</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">13.06</td>
+            <td class="cell--number">12.50</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#dac5a3e34f09a1adab3b4e3da7269a87e8db07e0" class="src_link" title="lib/lettershift.rb">lib/lettershift.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">46</td>
+            <td class="cell--number">27</td>
             <td class="cell--number">19</td>
             <td class="cell--number">19</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">26.00</td>
+            <td class="cell--number">22.63</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f169fd9e99c91fe5f4090eb86aba0a6e37a3d80f" class="src_link" title="lib/offsetmaker.rb">lib/offsetmaker.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">89.47 %</td>
-            <td class="cell--number">32</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">30</td>
             <td class="cell--number">19</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">19.79</td>
+            <td class="cell--number">19</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">17.21</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#3a6553884191056651d33a10b7ff72ffcf0aa5af" class="src_link" title="lib/shiftmaker.rb">lib/shiftmaker.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">21</td>
+            <td class="cell--number">20</td>
             <td class="cell--number">13</td>
             <td class="cell--number">13</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">94.23</td>
+            <td class="cell--number">92.00</td>
             
           </tr>
         
@@ -201,8 +201,8 @@
   <div class="header">
     <h3>lib/enigma.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="red">
+  75.0%
 </span>
 
       lines covered
@@ -212,8 +212,8 @@
 
     <div class="t-line-summary">
       <b>24</b> relevant lines.
-      <span class="green"><b>24</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>18</b> lines covered</span> and
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
 
     
@@ -318,7 +318,7 @@
 
             
 
-            <code class="ruby"> </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -362,13 +362,13 @@
 
             
 
-            <code class="ruby">    key_set = Keymaker.new(key.to_s)</code>
+            <code class="ruby">    key_set = Keymaker.makekeys(key.to_s)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="14">
+            
             
 
             
@@ -378,19 +378,19 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="15">
+            
             
 
             
 
-            <code class="ruby">    shiftmaker = Shiftmaker.new(key_set.makekeys, offset.makekeys)</code>
+            <code class="ruby">    shiftmaker = Shiftmaker.new(key_set, offset.makekeys)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="16">
+            
             
 
             
@@ -400,8 +400,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="17">
+            
             
 
             
@@ -411,8 +411,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="18">
+            
             
 
             
@@ -422,8 +422,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="19">
+            
             
 
             
@@ -662,8 +662,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="32" data-linenumber="5">
-            <span class="hits">32</span>
+          <li class="covered" data-hits="31" data-linenumber="5">
+            <span class="hits">31</span>
             
 
             
@@ -673,8 +673,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="32" data-linenumber="6">
-            <span class="hits">32</span>
+          <li class="covered" data-hits="31" data-linenumber="6">
+            <span class="hits">31</span>
             
 
             
@@ -717,8 +717,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="10">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="19" data-linenumber="10">
+            <span class="hits">19</span>
             
 
             
@@ -728,8 +728,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="11">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="19" data-linenumber="11">
+            <span class="hits">19</span>
             
 
             
@@ -739,8 +739,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="12">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="19" data-linenumber="12">
+            <span class="hits">19</span>
             
 
             
@@ -750,8 +750,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="13">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="19" data-linenumber="13">
+            <span class="hits">19</span>
             
 
             
@@ -761,8 +761,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="14">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="19" data-linenumber="14">
+            <span class="hits">19</span>
             
 
             
@@ -772,8 +772,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="15">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="19" data-linenumber="15">
+            <span class="hits">19</span>
             
 
             
@@ -783,8 +783,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="16">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="19" data-linenumber="16">
+            <span class="hits">19</span>
             
 
             
@@ -838,8 +838,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="21">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="19" data-linenumber="21">
+            <span class="hits">19</span>
             
 
             
@@ -990,8 +990,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="43" data-linenumber="4">
-            <span class="hits">43</span>
+          <li class="covered" data-hits="42" data-linenumber="4">
+            <span class="hits">42</span>
             
 
             
@@ -1001,8 +1001,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="43" data-linenumber="5">
-            <span class="hits">43</span>
+          <li class="covered" data-hits="42" data-linenumber="5">
+            <span class="hits">42</span>
             
 
             
@@ -1012,8 +1012,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="43" data-linenumber="6">
-            <span class="hits">43</span>
+          <li class="covered" data-hits="42" data-linenumber="6">
+            <span class="hits">42</span>
             
 
             
@@ -1023,8 +1023,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="43" data-linenumber="7">
-            <span class="hits">43</span>
+          <li class="covered" data-hits="42" data-linenumber="7">
+            <span class="hits">42</span>
             
 
             
@@ -1067,8 +1067,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="11">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="5" data-linenumber="11">
+            <span class="hits">5</span>
             
 
             
@@ -1078,8 +1078,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="12">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="5" data-linenumber="12">
+            <span class="hits">5</span>
             
 
             
@@ -1089,8 +1089,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="13">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="5" data-linenumber="13">
+            <span class="hits">5</span>
             
 
             
@@ -1100,8 +1100,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="14">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="5" data-linenumber="14">
+            <span class="hits">5</span>
             
 
             
@@ -1111,8 +1111,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="60" data-linenumber="15">
-            <span class="hits">60</span>
+          <li class="covered" data-hits="49" data-linenumber="15">
+            <span class="hits">49</span>
             
 
             
@@ -1122,8 +1122,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="56" data-linenumber="16">
-            <span class="hits">56</span>
+          <li class="covered" data-hits="45" data-linenumber="16">
+            <span class="hits">45</span>
             
 
             
@@ -1133,8 +1133,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="56" data-linenumber="17">
-            <span class="hits">56</span>
+          <li class="covered" data-hits="45" data-linenumber="17">
+            <span class="hits">45</span>
             
 
             
@@ -1144,8 +1144,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="56" data-linenumber="18">
-            <span class="hits">56</span>
+          <li class="covered" data-hits="45" data-linenumber="18">
+            <span class="hits">45</span>
             
 
             
@@ -1155,8 +1155,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="56" data-linenumber="19">
-            <span class="hits">56</span>
+          <li class="covered" data-hits="45" data-linenumber="19">
+            <span class="hits">45</span>
             
 
             
@@ -1210,8 +1210,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="24">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="5" data-linenumber="24">
+            <span class="hits">5</span>
             
 
             
@@ -1227,7 +1227,7 @@
 
             
 
-            <code class="ruby">    #binding.pry</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1238,221 +1238,12 @@
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby">  #no longer required, covered by optional argument for shift, (-1) reverses encrypt</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">  # def unshift</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby">  #   keys = @shift_hash.keys</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby">  #   rotator = @set</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">  #   encrypted_array = []</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby">  #   @message_array.each do |letter|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
-            
-
-            <code class="ruby">  #     if @set.include?(letter)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
-            
-
-            <code class="ruby">  #       #Sbinding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="35">
-            
-            
-
-            
-
-            <code class="ruby">  #       original = @set.find_index(letter)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="36">
-            
-            
-
-            
-
-            <code class="ruby">  #       rotated = rotator.rotate(-(@shift_hash[keys[0]]))</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="37">
-            
-            
-
-            
-
-            <code class="ruby">  #       encrypted_array &lt;&lt; rotated[original]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
-            
-
-            <code class="ruby">  #       keys.rotate!</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="39">
-            
-            
-
-            
-
-            <code class="ruby">  #     else</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="40">
-            
-            
-
-            
-
-            <code class="ruby">  #       encrypted_array &lt;&lt; letter</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="41">
-            
-            
-
-            
-
-            <code class="ruby">  #     end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="42">
-            
-            
-
-            
-
-            <code class="ruby">  #   end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="43">
-            
-            
-
-            
-
-            <code class="ruby">  #   encrypted_array.join</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
-            
-
-            <code class="ruby">  # end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -1471,8 +1262,8 @@
   <div class="header">
     <h3>lib/offsetmaker.rb</h3>
     <h4>
-      <span class="yellow">
-  89.47%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -1482,8 +1273,8 @@
 
     <div class="t-line-summary">
       <b>19</b> relevant lines.
-      <span class="green"><b>17</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -1527,8 +1318,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="22" data-linenumber="4">
-            <span class="hits">22</span>
+          <li class="covered" data-hits="21" data-linenumber="4">
+            <span class="hits">21</span>
             
 
             
@@ -1538,8 +1329,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="22" data-linenumber="5">
-            <span class="hits">22</span>
+          <li class="covered" data-hits="21" data-linenumber="5">
+            <span class="hits">21</span>
             
 
             
@@ -1549,13 +1340,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
+          <li class="covered" data-hits="21" data-linenumber="6">
+            <span class="hits">21</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    @offsets_reversed</code>
           </li>
         </div>
       
@@ -1566,12 +1357,23 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
+          <li class="covered" data-hits="1" data-linenumber="9">
             <span class="hits">1</span>
             
 
@@ -1582,8 +1384,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="9">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="17" data-linenumber="10">
+            <span class="hits">17</span>
             
 
             
@@ -1593,19 +1395,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="10">
-            <span class="hits">18</span>
-            
-
-            
-
-            <code class="ruby">    offsets_reversed = (@encryption_key * @encryption_key).digits.first(4)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="18" data-linenumber="11">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="17" data-linenumber="11">
+            <span class="hits">17</span>
             
 
             
@@ -1615,46 +1406,46 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="12">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="17" data-linenumber="12">
+            <span class="hits">17</span>
             
 
             
 
-            <code class="ruby">    if offsets_reversed.count &lt; 4</code>
+            <code class="ruby">    offsetcheck</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="17" data-linenumber="13">
+            <span class="hits">17</span>
             
 
             
 
-            <code class="ruby">      until offsets_reversed.count == 4 do</code>
+            <code class="ruby">    @offsets_reversed.each do |offset|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="14">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="68" data-linenumber="14">
+            <span class="hits">68</span>
             
 
             
 
-            <code class="ruby">        offsets_reversed &lt;&lt; 0</code>
+            <code class="ruby">          offset_hash[keys.last] = offset</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
+          <li class="covered" data-hits="68" data-linenumber="15">
+            <span class="hits">68</span>
             
 
-            <code class="ruby">      end</code>
+            
+
+            <code class="ruby">          keys.rotate!(-1)</code>
           </li>
         </div>
       
@@ -1665,95 +1456,95 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
+          <li class="covered" data-hits="17" data-linenumber="17">
+            <span class="hits">17</span>
             
 
-            <code class="ruby">    </code>
+            
+
+            <code class="ruby">    offset_hash</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="18">
-            <span class="hits">18</span>
+          <li class="never" data-hits="" data-linenumber="18">
+            
             
 
             
 
-            <code class="ruby">    offsets_reversed.each do |offset|</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="72" data-linenumber="19">
-            <span class="hits">72</span>
+          <li class="never" data-hits="" data-linenumber="19">
+            
             
 
             
 
-            <code class="ruby">      if offset == nil</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="20">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">        offset_hash[keys.last] = 0</code>
+            
+
+            <code class="ruby">  def offsetcheck</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="21">
-            
-            
-
+          <li class="covered" data-hits="17" data-linenumber="21">
+            <span class="hits">17</span>
             
 
-            <code class="ruby">        keys.rotate!(-1)</code>
+            
+
+            <code class="ruby">    @offsets_reversed = (@encryption_key * @encryption_key).digits.first(4)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
+          <li class="covered" data-hits="17" data-linenumber="22">
+            <span class="hits">17</span>
             
 
-            <code class="ruby">      else</code>
+            
+
+            <code class="ruby">    if @offsets_reversed.count &lt; 4</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="72" data-linenumber="23">
-            <span class="hits">72</span>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">          offset_hash[keys.last] = offset</code>
+            <code class="ruby">      until @offsets_reversed.count == 4 do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="72" data-linenumber="24">
-            <span class="hits">72</span>
+          <li class="covered" data-hits="3" data-linenumber="24">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">          keys.rotate!(-1)</code>
+            <code class="ruby">        @offsets_reversed &lt;&lt; 0</code>
           </li>
         </div>
       
@@ -1780,13 +1571,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="27">
-            <span class="hits">18</span>
+          <li class="never" data-hits="" data-linenumber="27">
+            
             
 
             
 
-            <code class="ruby">    offset_hash</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1808,34 +1599,12 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="32">
             
             
 
@@ -1921,8 +1690,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="16" data-linenumber="5">
-            <span class="hits">16</span>
+          <li class="covered" data-hits="15" data-linenumber="5">
+            <span class="hits">15</span>
             
 
             
@@ -1932,8 +1701,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="16" data-linenumber="6">
-            <span class="hits">16</span>
+          <li class="covered" data-hits="15" data-linenumber="6">
+            <span class="hits">15</span>
             
 
             
@@ -1976,8 +1745,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="10">
-            <span class="hits">44</span>
+          <li class="covered" data-hits="43" data-linenumber="10">
+            <span class="hits">43</span>
             
 
             
@@ -1987,8 +1756,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="11">
-            <span class="hits">44</span>
+          <li class="covered" data-hits="43" data-linenumber="11">
+            <span class="hits">43</span>
             
 
             
@@ -1998,8 +1767,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="176" data-linenumber="12">
-            <span class="hits">176</span>
+          <li class="covered" data-hits="172" data-linenumber="12">
+            <span class="hits">172</span>
             
 
             
@@ -2009,8 +1778,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="704" data-linenumber="13">
-            <span class="hits">704</span>
+          <li class="covered" data-hits="688" data-linenumber="13">
+            <span class="hits">688</span>
             
 
             
@@ -2020,8 +1789,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="176" data-linenumber="14">
-            <span class="hits">176</span>
+          <li class="covered" data-hits="172" data-linenumber="14">
+            <span class="hits">172</span>
             
 
             
@@ -2064,8 +1833,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="18">
-            <span class="hits">44</span>
+          <li class="covered" data-hits="43" data-linenumber="18">
+            <span class="hits">43</span>
             
 
             
@@ -2081,23 +1850,12 @@
 
             
 
-            <code class="ruby">    #binding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
