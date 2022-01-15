@@ -15,10 +15,6 @@ class Keymaker
       keys[letter] = (@encryption_key[0] +  @encryption_key[1]).to_i
       @encryption_key.rotate!
     end
-    # keys["A"] = (@encryption_key[0] +  @encryption_key[1]).to_i
-    # keys["B"] = (@encryption_key[1] +  @encryption_key[2]).to_i
-    # keys["C"] = (@encryption_key[2] +  @encryption_key[3]).to_i
-    # keys["D"] = (@encryption_key[3] +  @encryption_key[4]).to_i
     keys
 
   end

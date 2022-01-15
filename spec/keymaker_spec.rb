@@ -28,6 +28,8 @@ RSpec.describe Keymaker do
     expect(@key_hash_4.makekeys).to eq({"A"=>0, "B"=>0, "C"=>0, "D"=>0})
   end
   it 'can report key used after correction' do
+    @key_hash.makekeys
+    expect(@key_hash.key_used).to eq("02715")
     expect(@key_hash_4.key_used).to eq("00000")
   end
 end
