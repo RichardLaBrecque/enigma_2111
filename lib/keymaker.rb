@@ -23,6 +23,5 @@ class Keymaker
         encryption_key.unshift("0")
       end
     end
-    #binding.pry
   end
 end
