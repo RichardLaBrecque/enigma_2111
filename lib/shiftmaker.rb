@@ -16,6 +16,5 @@ class Shiftmaker
       end
     end
     offsets
-    #binding.pry
   end
 end
