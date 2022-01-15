@@ -9,7 +9,6 @@ class LetterShift
 # optional 1 encrypts, (-1) decripts
   def shift(direction = 1)
     keys = @shift_hash.keys
-    #rotator = @set
     encrypted_array = []
     @message_array.each do |letter|
       if @set.include?(letter)

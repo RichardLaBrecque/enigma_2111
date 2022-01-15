@@ -1,5 +1,22 @@
 # Welcome to Enigma!
 
+## Self eval   
+### Functionality  
+As is currently set up, The CLI is operating as expected, and generating proper files  
+
+OOP  
+Project seems to be broken into what feels like the most logical pieces, each class does exactly 1 step of the process  
+
+Conventions and Mechanics  
+hashes hashes everywhere!
+
+TDD  
+I treid to test for everything i could think of, and I am rutinely adding tests as I try to make changes
+
+Version control   
+at current count 40 commits from 10 branches
+***
+
 ## This project can encrypt and decrypt messages based on a key and date comboination
 * Fork and clone this repo down to see what magic it can do!
 ### Basic operation of the ENIGMA encryption
