@@ -1,5 +1,7 @@
 # Welcome to Enigma!
 
+***
+
 ## Self eval   
 ### Functionality  
 As is currently set up, The CLI is operating as expected, and generating proper files  
