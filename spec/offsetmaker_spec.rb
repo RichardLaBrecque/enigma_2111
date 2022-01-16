@@ -18,4 +18,8 @@ RSpec.describe Offsetmaker do
     expect(@offset_hash.makekeys).to eq({"A"=>1, "B"=>0, "C"=>2, "D"=>5})
     expect(@offset_hash_2.makekeys).to eq({"A"=>0, "B"=>0, "C"=>0, "D"=>0})
   end
+
+  # it 'has a class method' do
+  #   expect(@offset_3).to eq({"A"=>1, "B"=>0, "C"=>2, "D"=>5})
+  # end
 end

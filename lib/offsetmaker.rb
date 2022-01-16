@@ -26,5 +26,9 @@ class Offsetmaker
     end
   end
 
+  # def self.start(date)
+  #   offset = Offsetmaker.new(date)
+  #   offset.makekeys
+  # end
 
 end
