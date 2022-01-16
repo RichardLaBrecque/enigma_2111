@@ -7,14 +7,14 @@ class Shiftmaker
   end
 
   def makekeys
-    offsets = Hash.new
+    shifts = Hash.new
     @key_hash.each do |key, key_value|
       @offset_hash.each do |offset, offset_value|
         if offset == key
-          offsets[key] = (key_value + offset_value)
+          shifts[key] = (key_value + offset_value)
         end
       end
     end
-    offsets
+    shifts
   end
 end

@@ -1,9 +1,8 @@
 require 'pry'
 class Keymaker
-  attr_reader :encryption_key, :key, :key_used
+  attr_reader :encryption_key, :key_used
   def initialize(encryption_key)
-    @key = encryption_key
-    @encryption_key = @key.split("")
+    @encryption_key = encryption_key.to_s.split("")
     keycheck
     @key_used = @encryption_key.join
   end
@@ -26,4 +25,9 @@ class Keymaker
       end
     end
   end
+  #sort out this class method later
+   # def self.start(encryption_key)
+   #   keys = Keymaker.new(encryption_key)
+   #   keys.makekeys
+   # end
 end
