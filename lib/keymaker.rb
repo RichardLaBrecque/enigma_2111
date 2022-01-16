@@ -25,9 +25,4 @@ class Keymaker
       end
     end
   end
-  #sort out this class method later
-   # def self.start(encryption_key)
-   #   keys = Keymaker.new(encryption_key)
-   #   keys.makekeys
-   # end
 end

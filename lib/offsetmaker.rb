@@ -3,7 +3,7 @@ class Offsetmaker
   def initialize(date)
     @date = date
     @encryption_key = date.to_i
-    @offsets_reversed
+    @offsets_reversed = (@encryption_key * @encryption_key).digits.first(4)
   end
 
   def makekeys
@@ -18,17 +18,10 @@ class Offsetmaker
   end
 
   def offsetcheck
-    @offsets_reversed = (@encryption_key * @encryption_key).digits.first(4)
     if @offsets_reversed.count < 4
       until @offsets_reversed.count == 4 do
         @offsets_reversed << 0
       end
     end
   end
-
-  # def self.start(date)
-  #   offset = Offsetmaker.new(date)
-  #   offset.makekeys
-  # end
-
 end
