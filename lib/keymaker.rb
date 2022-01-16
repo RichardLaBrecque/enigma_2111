@@ -21,7 +21,7 @@ class Keymaker
   def keycheck
     if @encryption_key.count < 5
       until @encryption_key.count == 5 do
-        encryption_key.unshift("0")
+        @encryption_key.unshift("0")
       end
     end
   end
