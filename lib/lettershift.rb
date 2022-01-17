@@ -9,14 +9,14 @@ class LetterShift
 # optional 1 encrypts, (-1) decripts
   def shift(direction = 1)
     keys = @shift_hash.keys #maybe make these attributes? would make method shorter, but not actually change anything useful
-    encrypted_array = []
+    encrypted_array = [] # i am returning an array? maybe .map
     @message_array.each do |letter|
       if @set.include?(letter)
         original_index = @set.find_index(letter)
         rotated = @set.rotate(direction * (@shift_hash[keys[0]]))
         encrypted_array << rotated[original_index]
         keys.rotate!
-      else
+      else #how would this work with a map? with no accumulator how would i get the commas ect?
         encrypted_array << letter
       end
     end

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-01-15T20:49:33-05:00">2022-01-15T20:49:33-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-01-17T16:24:11-05:00">2022-01-17T16:24:11-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         13.68
+         13.66
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>199</b> relevant lines,
-    <span class="green"><b>199</b> lines covered</span> and
+    <b>198</b> relevant lines,
+    <span class="green"><b>198</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,7 +73,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#657d94aecd9a8337104ecbc85872a82832b17460" class="src_link" title="lib/enigma.rb">lib/enigma.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">30</td>
+            <td class="cell--number">35</td>
             <td class="cell--number">23</td>
             <td class="cell--number">23</td>
             <td class="cell--number">0</td>
@@ -84,7 +84,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#84679ba0ad7bbd1a4f23f1e074c043292029eb52" class="src_link" title="lib/keymaker.rb">lib/keymaker.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">33</td>
+            <td class="cell--number">28</td>
             <td class="cell--number">18</td>
             <td class="cell--number">18</td>
             <td class="cell--number">0</td>
@@ -106,11 +106,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f169fd9e99c91fe5f4090eb86aba0a6e37a3d80f" class="src_link" title="lib/offsetmaker.rb">lib/offsetmaker.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">34</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">19</td>
+            <td class="cell--number">27</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">18</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">18.16</td>
+            <td class="cell--number">18.17</td>
             
           </tr>
         
@@ -329,7 +329,7 @@
 
             
 
-            <code class="ruby">    key_set = Keymaker.new(key)</code>
+            <code class="ruby">    key_set = Keymaker.new(key) #class methods?</code>
           </li>
         </div>
       
@@ -494,7 +494,7 @@
 
             
 
-            <code class="ruby">    decrypted = message.shift(-1)</code>
+            <code class="ruby">    decrypted = message.shift(-1) #-1 the only differnce between encrypt and decrypt  could proably helper or module the rest away</code>
           </li>
         </div>
       
@@ -544,6 +544,61 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">  # def crack(message, date = (Date.today.strftime&quot;%d%m%y&quot;).to_s)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">  #   offset = Offsetmaker.new(date)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">  #   crackset = Crack.new(message, date)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby">  # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -635,7 +690,7 @@
 
             
 
-            <code class="ruby">    @encryption_key = encryption_key.to_s.split(&quot;&quot;)</code>
+            <code class="ruby">    @encryption_key = encryption_key.to_s.split(&quot;&quot;) #</code>
           </li>
         </div>
       
@@ -657,7 +712,7 @@
 
             
 
-            <code class="ruby">    @key_used = @encryption_key.join</code>
+            <code class="ruby">    @key_used = @encryption_key.join #exists for report to runner file</code>
           </li>
         </div>
       
@@ -811,7 +866,7 @@
 
             
 
-            <code class="ruby">  def keycheck</code>
+            <code class="ruby">  def keycheck #basically .rjust(5, &quot;0&quot;)</code>
           </li>
         </div>
       
@@ -883,61 +938,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">  #sort out this class method later</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby">   # def self.start(encryption_key)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby">   #   keys = Keymaker.new(encryption_key)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">   #   keys.makekeys</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby">   # end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="33">
             
             
 
@@ -1106,7 +1106,7 @@
 
             
 
-            <code class="ruby">    encrypted_array = []</code>
+            <code class="ruby">    encrypted_array = [] # i am returning an array? maybe .map</code>
           </li>
         </div>
       
@@ -1183,7 +1183,7 @@
 
             
 
-            <code class="ruby">      else</code>
+            <code class="ruby">      else #how would this work with a map? with no accumulator how would i get the commas ect?</code>
           </li>
         </div>
       
@@ -1283,8 +1283,8 @@
     
 
     <div class="t-line-summary">
-      <b>19</b> relevant lines.
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>18</b> relevant lines.
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1357,7 +1357,7 @@
 
             
 
-            <code class="ruby">    @offsets_reversed</code>
+            <code class="ruby">    @offsets_reversed = (@encryption_key * @encryption_key).digits.first(4)</code>
           </li>
         </div>
       
@@ -1522,23 +1522,12 @@
 
             
 
-            <code class="ruby">    @offsets_reversed = (@encryption_key * @encryption_key).digits.first(4)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="18" data-linenumber="22">
-            <span class="hits">18</span>
-            
-
-            
-
             <code class="ruby">    if @offsets_reversed.count &lt; 4</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
+          <li class="covered" data-hits="1" data-linenumber="22">
             <span class="hits">1</span>
             
 
@@ -1549,7 +1538,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="24">
+          <li class="covered" data-hits="3" data-linenumber="23">
             <span class="hits">3</span>
             
 
@@ -1560,7 +1549,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -1571,7 +1560,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="25">
             
             
 
@@ -1582,7 +1571,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
@@ -1593,73 +1582,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby">  # def self.start(date)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby">  #   offset = Offsetmaker.new(date)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">  #   offset.makekeys</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby">  # end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="34">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -1795,7 +1718,7 @@
 
             
 
-            <code class="ruby">  def makekeys</code>
+            <code class="ruby">  def makekeys #i named EVERYTHING makekeys, probably should chnage this, or module, so similar but so different</code>
           </li>
         </div>
       
