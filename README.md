@@ -13,10 +13,11 @@ Conventions and Mechanics
 hashes hashes everywhere!
 
 TDD  
-I treid to test for everything i could think of, and I am rutinely adding tests as I try to make changes
+I tried to test for everything i could think of, and I am routinely adding tests as I try to make changes
 
 Version control   
 at current count 40 commits from 10 branches
+
 ***
 
 ## This project can encrypt and decrypt messages based on a key and date comboination
