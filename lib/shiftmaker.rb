@@ -6,7 +6,7 @@ class Shiftmaker
     @offset_hash = offset_hash
   end
 
-  def makekeys
+  def makekeys #i named EVERYTHING makekeys, probably should chnage this, or module, so similar but so different
     shifts = Hash.new
     @key_hash.each do |key, key_value|
       @offset_hash.each do |offset, offset_value|

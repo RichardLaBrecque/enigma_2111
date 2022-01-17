@@ -2,9 +2,9 @@ require 'pry'
 class Keymaker
   attr_reader :encryption_key, :key_used
   def initialize(encryption_key)
-    @encryption_key = encryption_key.to_s.split("")
+    @encryption_key = encryption_key.to_s.split("") #
     keycheck
-    @key_used = @encryption_key.join
+    @key_used = @encryption_key.join #exists for report to runner file
   end
 
   def makekeys
@@ -18,7 +18,7 @@ class Keymaker
 
   end
 
-  def keycheck
+  def keycheck #basically .rjust(5, "0")
     if @encryption_key.count < 5
       until @encryption_key.count == 5 do
         @encryption_key.unshift("0")
